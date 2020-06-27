@@ -13,4 +13,5 @@
 
 * [awesome-vue](https://github.com/vuejs/awesome-vue)
 * [element](https://github.com/ElemeFE/element)
+* [vuetify](https://github.com/vuetifyjs/vuetify)
 * [vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful)
