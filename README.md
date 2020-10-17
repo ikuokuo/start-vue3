@@ -2,16 +2,13 @@
 
 [Vue.js]: http://vuejs.org/
 
-[![Status](https://img.shields.io/badge/Vue-next-brightgreen)](https://github.com/vuejs/vue-next)
+[![Status](https://img.shields.io/badge/Vue-3.0-brightgreen)](https://github.com/vuejs/vue-next)
+
+## Tutorial
+
+* [Start Vue 3 and Ant Design](docs/start_vue3_antdv.md)
 
 ## References
 
-* [vue](https://github.com/vuejs/vue)
 * [vue-next](https://github.com/vuejs/vue-next)
-
-## Relations
-
 * [awesome-vue](https://github.com/vuejs/awesome-vue)
-* [element](https://github.com/ElemeFE/element)
-* [vuetify](https://github.com/vuetifyjs/vuetify)
-* [vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful)
