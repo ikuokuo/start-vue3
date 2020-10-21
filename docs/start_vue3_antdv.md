@@ -311,8 +311,53 @@ app.mount("#app");
 
 ![](start_vue3_antdv/my-site.gif)
 
+## Deploy to GitHub Pages
+
+Edit `vite.config.ts`, add base path:
+
+```js
+module.exports = {
+  // otherwise, may assets 404 or visit with index.html
+  base: "/start-vue3/",
+  assetsDir: "",
+};
+```
+
+Edit `router/index.ts`, add base path:
+
+```ts
+export default createRouter({
+  history: createWebHistory("/start-vue3/"),
+  routes,
+});
+```
+
+Build and deploy:
+
+```zsh
+cd my-site
+yarn build
+
+export GIT_HASH=`git rev-parse --short HEAD`
+
+cd dist/
+git init
+git remote add origin git@github-ik:ikuokuo/start-vue3.git
+git checkout --orphan gh-pages
+git add .
+git commit -m "deploy website - based on $GIT_HASH"
+git push origin gh-pages
+```
+
+<!--
+touch .nojekyll
+-->
+
+Visit: https://ikuokuo.github.io/start-vue3/.
+
 ## References
 
 - [Vue 3 - Docs](https://v3.vuejs.org/guide/)
 - [Ant Design Vue - Docs](https://2x.antdv.com/)
 - [Vue Vben Admin](https://github.com/anncwb/vue-vben-admin)
+- [Deploying a subfolder to GitHub Pages](https://gist.github.com/cobyism/4730490)

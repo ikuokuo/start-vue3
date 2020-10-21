@@ -14,6 +14,6 @@ const routes = [
 ];
 
 export default createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("/start-vue3/"),
   routes,
 });

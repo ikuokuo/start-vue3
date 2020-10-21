@@ -11,4 +11,7 @@ module.exports = {
   optimizeDeps: {
     include: ["@ant-design/icons-vue"],
   },
+  // otherwise, may assets 404 or visit with index.html
+  base: "/start-vue3/",
+  assetsDir: "",
 };
