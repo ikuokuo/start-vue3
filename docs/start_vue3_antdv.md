@@ -37,7 +37,31 @@ Visit:
 
 * [Vite - Config File](https://github.com/vitejs/vite#config-file)
 
+```js
+import { resolve } from "path";
+
+function pathResolve(dir: string) {
+  return resolve(__dirname, '.', dir);
+}
+
+module.exports = {
+  alias: {
+    '/@/': pathResolve('src'),
+  },
+  optimizeDeps: {
+    include: [
+      '@ant-design/icons-vue',
+    ],
+  },
+}
+```
+
 ## Preparation
+
+<!--
+eslint --init
+yarn add -D eslint eslint-plugin-vue
+-->
 
 ### TypeScript
 
@@ -72,8 +96,16 @@ yarn add vuex@@next
 
 ```zsh
 yarn add ant-design-vue@next
+# import on demand
 yarn add -D babel-plugin-import
+
+# https://github.com/vueComponent/ant-design-vue/issues/2798
+yarn add @ant-design/colors
 ```
+
+<!--
+yarn add @ant-design/icons-vue
+-->
 
 `.babelrc`:
 
@@ -85,6 +117,33 @@ yarn add -D babel-plugin-import
 }
 ```
 
+### Others
+
+```zsh
+yarn add -D sass
+```
+
+## Go Coding
+
+### Use main.ts
+
+* Rename `main.js` to `main.ts`
+* Edit `index.html`, replace `/src/main.js` with `/src/main.ts`
+
+    ```html
+    ...
+    <body>
+      <div id="app"></div>
+      <script type="module" src="/src/main.ts"></script>
+    </body>
+    </html>
+    ```
+
+### Use vue-router
+
+
 ## References
 
-* [vue-next](https://github.com/vuejs/vue-next)
+* [Vue 3 - Docs](https://v3.vuejs.org/guide/)
+* [Ant Design Vue - Docs](https://2x.antdv.com/)
+* [Vue Vben Admin](https://github.com/anncwb/vue-vben-admin)
