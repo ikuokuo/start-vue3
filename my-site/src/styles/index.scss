@@ -3,5 +3,14 @@
 @import "./_variables.scss";
 
 #app {
-  font-family: 'Microsoft YaHei,微软雅黑,Arial,sans-serif,Helvetica Neue,Helvetica,Pingfang SC,Hiragino Sans GB';
+  font-family: "Microsoft YaHei,微软雅黑,Arial,sans-serif,Helvetica Neue,Helvetica,Pingfang SC,Hiragino Sans GB";
+
+  .ant-layout-sider {
+    .ant-layout-sider-children .ant-row-flex {
+      border-bottom: 1px solid rgb(240, 240, 240);
+    }
+    .ant-layout-sider-trigger {
+      border-top: 1px solid rgb(240, 240, 240);
+    }
+  }
 }

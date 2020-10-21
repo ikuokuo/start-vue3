@@ -1,17 +1,28 @@
 <template>
-  <div class="app-logo ma-2">
-    <img class="logo-icon" :src="logo" />
-    <div v-if="show" class="logo-title ml-2">Vue 3</div>
-  </div>
+  <a-row type="flex">
+    <a-col style="flex-grow: 1">
+      <a-row class="app-logo" type="flex" align="middle" justify="center">
+        <a-col>
+          <img class="logo-icon" :src="logo" />
+        </a-col>
+        <a-col>
+          <div v-if="show" class="logo-title ml-2">Start Vue 3</div>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col>
+      <a-divider type="vertical" :style="{ height: '48px', margin: '8px 0' }" />
+    </a-col>
+  </a-row>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref, watch } from 'vue';
+import { defineComponent, PropType, ref, watch } from "vue";
 
-import logo from '/@/assets/logo.png';
+import logo from "/@/assets/logo.png";
 
 export default defineComponent({
-  name: 'Logo',
+  name: "Logo",
   props: {
     showTitle: {
       type: Boolean as PropType<boolean>,
@@ -35,17 +46,15 @@ export default defineComponent({
     return {
       logo,
       show: showRef,
-    }
+    };
   },
 });
 </script>
 
 <style lang="scss">
 .app-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
+  height: 64px;
 
   .logo-icon {
     height: 32px;
@@ -53,7 +62,6 @@ export default defineComponent({
 
   .logo-title {
     font-size: 16px;
-    color: white;
   }
 }
 </style>
