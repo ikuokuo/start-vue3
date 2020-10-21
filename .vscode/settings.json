@@ -1,0 +1,10 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false,
+  },
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": [ "./my-site" ],
+  "vetur.format.options.tabSize": 2,
+  "vetur.format.options.useTabs": false,
+  "vetur.validation.template": true
+}

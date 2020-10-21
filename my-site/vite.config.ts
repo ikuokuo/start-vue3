@@ -1,16 +1,14 @@
 import { resolve } from "path";
 
 function pathResolve(dir: string) {
-  return resolve(__dirname, '.', dir);
+  return resolve(__dirname, ".", dir);
 }
 
 module.exports = {
   alias: {
-    '/@/': pathResolve('src'),
+    "/@/": pathResolve("src"),
   },
   optimizeDeps: {
-    include: [
-      '@ant-design/icons-vue',
-    ],
+    include: ["@ant-design/icons-vue"],
   },
-}
+};
