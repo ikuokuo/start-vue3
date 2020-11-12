@@ -1,0 +1,1 @@
+import{d as t,o as n,c as e,a as s,t as a}from"./index.a5681fb3.js";var o=t({name:"Setting",computed:{count(){return this.$store.state.count}}});const r=s("h1",null,"This is a setting page",-1);o.render=function(t,o,u,i,c,l){return n(),e("div",null,[r,s("p",null,"store count is: "+a(t.count),1)])};export default o;
