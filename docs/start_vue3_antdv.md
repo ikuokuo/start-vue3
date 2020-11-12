@@ -352,6 +352,15 @@ git push origin gh-pages
 ```
 
 <!--
+git clone -b gh-pages git@github-ik:ikuokuo/start-vue3.git pages
+cp -r dist/* ./pages
+
+cd pages/
+git add .
+git commit -m "deploy website - based on $GIT_HASH"
+git push
+
+---
 touch .nojekyll
 -->
 
