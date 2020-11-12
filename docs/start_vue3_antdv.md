@@ -105,7 +105,7 @@ yarn add vue-router@next
 ![](https://img.shields.io/npm/v/vuex/next.svg)
 
 ```zsh
-yarn add vuex@@next
+yarn add vuex@next
 ```
 
 ### [Ant Design Vue](https://github.com/vueComponent/ant-design-vue/)
